@@ -11,11 +11,11 @@ The code in this repository altogether make the compiler. Currently, the reposit
 
 Each bolded _filename_ file above can be compiled with a C++ compiler. For instance, with `g++`:
 
-		g++ -std=c++17 filename.cc -o filename
+	g++ -std=c++17 filename.cc -o filename
 
 Then to convert a WLP4 source code to MIPS assembly, simply run:
 
-		./wlp4scan.cc < src.wlp4 | ./wlp4parse | ./wlp4type | ./wlp4gen
+	./wlp4scan.cc < src.wlp4 | ./wlp4parse | ./wlp4type | ./wlp4gen
 
 There are still several more pieces to include - the linker, loader, and the actual actual runner. I will work on updating that. Secondly, I will also try organizing all the programs more logically separating each crucial part of the process, then combine it all into one exectuable that is the _true_ compiler. Lastly, there are many optimizations that can be included for the generated code. So far, only three optimizations are fully implemented.
 
